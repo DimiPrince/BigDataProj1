@@ -1,6 +1,11 @@
 import pymongo
+from urllib.parse import quote_plus
 
-uri = "mongodb+srv://<dprincipale>:<noHVUHjCW9iUKmSE>@cluster0.hnstfom.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+username = quote_plus("dprincipale")
+password = quote_plus("noHVUHjCW9iUKmSE")
+cluster = "cluster0.hnstfom"
+
+uri = f"mongodb+srv://{username}:{password}@{cluster}.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 client = pymongo.MongoClient(uri)
 
