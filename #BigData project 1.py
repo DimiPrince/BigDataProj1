@@ -1,2 +1,0 @@
-#BigData project 1
-
