@@ -1,7 +1,7 @@
 #BigData project 1
 #/usr/local/bin/python3 -m pip install pymongo
 #interpreter bottom right in VS code, some libraries can be installed in one interpreter but not another
-
+#install certifi for ssl connection into python directory too
 #can test if you are being connected to the database by using the following code
 
 import pymongo
@@ -22,9 +22,9 @@ python  is installed'''
 db = client["BigData"]
 collection = db["city_inspections"]
 
-'''uncomment if you want to see all the data in the collection,
-currently using file as template for other files to follow DRY principle "
-
+'''currently using file as template for other files to follow DRY principle "
+    uncomment below if you want to see all the data in the collection,
+    
 for document in collection.find():
     print(document)
 
