@@ -1,0 +1,3 @@
+#BigData project 1
+#/usr/local/bin/python3 -m pip install pymongo
+#interpreter bottom right
