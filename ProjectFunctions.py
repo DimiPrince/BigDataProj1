@@ -1,8 +1,4 @@
-#BigData project 1
-#/usr/local/bin/python3 -m pip install pymongo
-#interpreter bottom right in VS code, some libraries can be installed in one interpreter but not another
-
-#can test if you are being connected to the database by using the following code
+#functions needed for the project
 
 import pymongo
 import certifi
@@ -22,8 +18,13 @@ python  is installed'''
 db = client["BigData"]
 collection = db["city_inspections"]
 
-for document in collection.find():
-    print(document)
-
-
-#should print all the sample data in the comments collection
+def check_business_violation():
+    business_name = input("Enter a business name: ")
+    document = collection.find_one({"business_name": business_name})
+    if document is not None:
+        if document['result'] == "No Violation Issued":
+            print(f"The business '{business_name}' has no violations.")
+        else:
+            print(f"The business '{business_name}' has a violation.")
+    else:
+        print("Business Not found.")
