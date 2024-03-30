@@ -1,5 +1,4 @@
 #file was to upload data to the database
-#file also has all the variables needed for reuses in other files
 import pymongo
 import json
 from urllib.parse import quote_plus

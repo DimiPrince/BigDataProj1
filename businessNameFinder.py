@@ -4,7 +4,7 @@
 
 #can test if you are being connected to the database by using the following code
 
-from setupTest import username, password, cluster, uri, client, db, collection
+from ProjectDocumentation import username, password, cluster, uri, client, db, collection
 
 #use "ATLIXCO DELI GROCERY INC." as a test business name
 def BusinessFinder():
