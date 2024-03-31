@@ -16,5 +16,5 @@ def BusinessFinder():
         print("No business found with that name.")
 
 BusinessFinder()
-
+        
 #should prompt user then print business if document exist
